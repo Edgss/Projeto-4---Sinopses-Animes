@@ -1,5 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+  font-family: "animes";
+  src: url(fontes/Anime\ Inept.otf);
+}
+
+
 *{
-  margin:0
-  padding:0
-  box-sizing: border-box
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", serif;
+  background-color: black;
+  color: white;
+}
+h1{
+  color: transparent;
+  text-align: center;
+  font-size: 3rem;
+  padding: .5rem 0 ;
+  font-family: "Poppins", serif;
+  background-image: linear-gradient(45deg, #cbd5e1,#94a3b8, #e2e8f0 );
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  animation: anime 5s  linear;
+}
+
+@keyframes anime {
+    0%{background-position-x: 100%;}
+    100%{background-position: 400%;}
+}
+
+img{
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.galeria{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: .5rem 0 2rem ;
+}
+.animes{
+  position: relative;
+  overflow: hidden;
+  width: 250px;
+  height: 350px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+.sinopses{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.911);
+  transition: .3s;
+  opacity: 0;
+  color: white;
+  padding: .5rem;
+  border-radius: 5px;
+}
+
+.sinopses:hover{
+  opacity: 1;
+}
+
+h2{
+  margin-bottom: .5rem;
+}
+
+/*Redes*/
+h5{
+  text-align: center;
+}
+.redes{
+  display: flex;
+  justify-content: center;
+  margin: .5rem 0;
+}
+
+.redes ul li{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 .5rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 60px;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+  transition: .3s ease;
+}
+
+.redes ul li:hover{
+  width: 5rem;
+}
+
+.redes ul li:hover::before{
+  opacity: 1;
+}
+
+.redes ul li span{
+  position: absolute;
+}
+
+.redes ul li .icon{
+  font-size: 1.5rem;
+  color: black;
+  transition: .1s;
+}
+
+.redes ul li:hover .icon{
+  transform: scale(0);
+}
+
+.redes ul li .text{
+  transform: scale(0);
+  transition: .2s;
+  transition-delay: .1s;
+  color: white;
+  font-size: 13px;
+}
+
+.redes ul li:hover .text{
+  transform: scale(1);
+}
+
+.redes ul li::before{
+  position: absolute;
+  content: " ";
+  inset: 0;
+  opacity: 0;
+  border-radius: 60px; 
+  background-color: black;
+}
+
+footer{
+  background-color: rgb(14, 14, 14);
+  text-align: center;
+  padding: .3rem;
 }
