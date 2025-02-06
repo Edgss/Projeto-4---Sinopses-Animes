@@ -148,6 +148,9 @@ h5{
   font-size: 13px;
 }
 
+.redes ul li .-insta{ 
+  font-size: 12px;
+}
 .redes ul li:hover .text{
   transform: scale(1);
 }
